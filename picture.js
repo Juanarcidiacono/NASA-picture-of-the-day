@@ -1,5 +1,4 @@
 function date() {
-
   const date = document.getElementById("date").value.trim()
   return date
 }
@@ -18,3 +17,4 @@ function settings() {
     return url_picture;
   });
 }
+
