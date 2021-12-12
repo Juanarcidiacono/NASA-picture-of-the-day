@@ -1,0 +1,7 @@
+body{
+    background-image: linear-gradient( 99deg,  rgba(115,18,81,1) 10.6%, rgba(28,28,28,1) 118% );
+}
+
+.picture{
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
