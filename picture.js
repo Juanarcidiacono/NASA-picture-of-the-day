@@ -1,6 +1,7 @@
 function date() {
-  var dateInput = document.getElementById("date").value.trim()
   var date = new Date();
+
+  var dateInput = document.getElementById("date").value.trim()
   var today = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
   
   if (dateInput > today) {
