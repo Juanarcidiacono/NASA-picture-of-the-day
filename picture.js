@@ -1,6 +1,16 @@
 function date() {
-  const date = document.getElementById("date").value.trim()
-  return date
+  var dateInput = document.getElementById("date").value.trim()
+  var date = new Date();
+  var today = date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate();
+  console.log(dateInput, today)
+
+  if (dateInput > today){
+    alert("Please don't enter day in the future.")
+  } else {
+    return dateInput;
+  }
+
+  
 }
 
 function settings() {
