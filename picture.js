@@ -1,16 +1,3 @@
-function date() {
-  var date = new Date();
-
-  var dateInput = document.getElementById("date").value.trim()
-  var today = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
-  
-  if (dateInput > today) {
-    alert("Please, don't enter day in the future.")
-  } else {
-    return dateInput;
-  }
-}
-
 function settings() {
   var data = {
     "url": "https://api.nasa.gov/planetary/apod?date=" + date() + "&api_key=DEMO_KEY",
@@ -25,4 +12,18 @@ function settings() {
     return url_picture;
   });
 }
+
+function date() {
+  var date = new Date();
+
+  var dateInput = document.getElementById("date").value.trim()
+  var today = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+  
+  if (dateInput > today) {
+    alert("Please, don't enter day in the future.")
+  } else {
+    return dateInput;
+  }
+}
+
 
