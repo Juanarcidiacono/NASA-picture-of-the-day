@@ -5,7 +5,7 @@ function date() {
   var today = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
   
   if (dateInput > today) {
-    alert("Please don't enter day in the future.")
+    alert("Please, don't enter day in the future.")
   } else {
     return dateInput;
   }
