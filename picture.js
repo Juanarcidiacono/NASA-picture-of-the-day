@@ -9,25 +9,28 @@ function url_picture() {
   $.ajax(data).done(function (response) {
     var url_picture = response["url"]
     console.log(url_picture)
-    $(".picture").append("<img src="+ url_picture+" alt='Picture of the day' />")
-    return url_picture;
+    $(".picture").append("<img src="+ url_picture +" alt='Picture of the day' />")
   });
 }
 
 function date() {
   var date = new Date();
 
-  var dateInput = document.getElementById("date").value.trim()
-  var today = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
+  var userDate = document.getElementById("date").value.trim();
   
-  if (dateInput > today)   {
+  var input = new Date(userDate)
+  var today = new Date(date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate());
+
+  console.log(userDate)
+  console.log(today)
+  var d1 = new Date()
+
+  if (input > today)   {
     alert("Please, don't enter day in the future.")
   } else {
-    return dateInput;
+    
+    return userDate;
   }
 }
 
-function insert(){
-  $(".picture").append("<img src="+ settings()+" alt='Picture of the day' />")
-}
  
